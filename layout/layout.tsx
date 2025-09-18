@@ -12,7 +12,7 @@ const MainContainer = ({ children }: { children: React.ReactNode }) => {
             {/* header */}
             <Navbar />
 
-            <main className="flex-grow p-3 flex">
+            <main className="flex-grow p-3 flex flex-col bg-gray-200">
                 {children}
             </main>
 

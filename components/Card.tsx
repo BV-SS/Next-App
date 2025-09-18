@@ -1,0 +1,44 @@
+import React from 'react'
+import Link from 'next/link';
+
+// icons
+import { AiFillDelete } from 'react-icons/ai';
+import { AiFillEdit } from 'react-icons/ai';
+import { MdLaunch } from "react-icons/md";
+
+// types
+import { Note } from '@/types/note';
+
+interface NoteCardProps{
+    item : Note,
+}
+
+
+const NoteCard : React.FC<NoteCardProps> = ({item}) => {
+    return (
+        <div className='h-48 w-78 shadow-lg  bg-white rounded-xl p-3 flex flex-col'>
+            <div className='flex justify-between items-center'>
+                <h3 className='text-lg font-semibold pl-2 text-gray-800'>{item.title}</h3>
+                <div>
+                    <AiFillEdit size={20} className='inline mx-2 hover:text-blue-500 cursor-pointer' />
+                    <AiFillDelete size={20} className='inline mx-1 hover:text-red-500 cursor-pointer' />
+                </div>
+            </div>
+        <hr className='border-gray-300 my-2'/>
+        <p className='text-gray-600 overflow-hidden [display:-webkit-box] [-webkit-line-clamp:3] [-webkit-box-orient:vertical] h-20 border-2'>
+{item.content}
+        </p>
+        <div className='flex items-center justify-between pt-2.5'>
+            <div className='border border-amber-700 text-amber-700 bg-amber-200 px-2 py-0.5 rounded-md text-sm'>
+                {item.tag}
+            </div>
+            <Link href="/notes/123" className='px-3 py-1 rounded-md bg-purple-800 text-white text-sm cursor-pointer hover:bg-purple-700'>
+            <button >View</button>
+            <MdLaunch className='inline ml-2'/>
+            </Link>
+        </div>
+        </div>
+    )
+}
+
+export default NoteCard
