@@ -7,7 +7,7 @@ import { AiFillEdit } from 'react-icons/ai';
 import { MdLaunch } from "react-icons/md";
 
 // types
-import { Note } from '@/types/note';
+import { Note } from '@/types/Note';
 
 interface NoteCardProps {
     item: Note,
@@ -36,7 +36,7 @@ const NoteCard: React.FC<NoteCardProps> = ({ item }) => {
                    
                 </div>
                  
-                <Link href="/notes/123" className='px-3 py-1 rounded-md bg-purple-800 text-white text-sm cursor-pointer hover:bg-purple-700'>
+                <Link href={`/notes/${item.id}`} className='px-3 py-1 rounded-md bg-purple-800 text-white text-sm cursor-pointer hover:bg-purple-700'>
                     <button >View</button>
                     <MdLaunch className='inline ml-2' />
                 </Link>
