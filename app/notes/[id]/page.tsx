@@ -20,7 +20,6 @@ import { AiFillEdit } from 'react-icons/ai';
 const NotePage = async ({ params }: Props) => {
   const { id } = await params;
   const note : Note | undefined = notesData.find((note) => note.id === Number(id))
-  console.log("note -",note)
   return (
     <>
       <div className='px-17 py-1'>
