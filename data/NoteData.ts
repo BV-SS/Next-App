@@ -6,7 +6,7 @@ const notesData: Note[] = [
         title: "Card title 1",
         content: "card content will go here",
         created_at: "2025-09-17",
-        tag: "personal"
+        tag: "Personal"
     },
      {
         id:212,
@@ -20,7 +20,7 @@ const notesData: Note[] = [
         title: "Card title 3",
         content: "card content will go here",
         created_at: "2025-09-15",
-        tag: "personal"
+        tag: "Personal"
     },
     {
         id:458,

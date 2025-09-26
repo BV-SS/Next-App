@@ -39,7 +39,7 @@ const NotePage = async ({ params }: Props) => {
           </div>
           <hr className='border-gray-300 my-2' />
 
-           <div className='border border-amber-700 text-amber-700 bg-amber-200 px-2 py-1.5 rounded-md text-sm inline-block w-fit my-2 mx-2'>
+           <div className='border border-teal-700 text-teal-700 bg-teal-200 px-2 py-1.5 rounded-md text-sm inline-block w-fit my-2 mx-2'>
                    {note?.tag}
                    
                 </div>
