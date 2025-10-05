@@ -9,6 +9,9 @@ import { MdLaunch } from "react-icons/md";
 // types
 import { Note } from '@/types/Note';
 
+// component
+import Chip from './Chip';
+
 interface NoteCardProps {
     item: Note,
 }
@@ -31,10 +34,7 @@ const NoteCard: React.FC<NoteCardProps> = ({ item }) => {
             </p>
             
             <div className='flex items-center justify-between pt-3.5'>
-                <div className='border border-amber-700 text-amber-700 bg-amber-200 px-2 py-0.5 rounded-md text-sm'>
-                    {item.tag}
-                   
-                </div>
+               <Chip tag={item.tag} />
                  
                 <Link href={`/notes/${item.id}`} className='px-3 py-1 rounded-md bg-purple-800 text-white text-sm cursor-pointer hover:bg-purple-700'>
                     <button >View</button>
