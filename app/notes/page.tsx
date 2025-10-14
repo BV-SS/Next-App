@@ -2,7 +2,7 @@ import React from "react";
 
 // Components
 import NoteCard from "@/components/Card";
-import NoteCounter from "@/components/NoteCounter";
+// import NoteCounter from "@/components/NoteCounter";
 
 // icons
 import { FaSearch } from "react-icons/fa";
@@ -35,7 +35,7 @@ const Notes = () => {
       </div>
 
       {/* temperary flow to study client and server components */}
-      <NoteCounter noteCount={notesData.length}/>
+      {/* <NoteCounter noteCount={notesData.length}/> */}
 
       <div className="px-7 pt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
         {notesData.map((item) => (
