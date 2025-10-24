@@ -1,7 +1,7 @@
 import React from 'react';
 
 //types
-import { Note } from '@/types/Note';
+import { Note } from '@/types/DataTypes';
 
 // components
 import CardContainer from '@/components/CardContainer';

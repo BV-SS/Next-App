@@ -8,3 +8,12 @@ export interface Note {
     created_at:string,
     tag:Tag
 }
+
+export interface Contact{
+    id: number,
+    name: string,
+    designation: string,
+    linkedIn: string,
+    github: string,
+    avatar: string
+}
