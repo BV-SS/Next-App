@@ -7,7 +7,7 @@ import { AiFillEdit } from 'react-icons/ai';
 import { MdLaunch } from "react-icons/md";
 
 // types
-import { Note } from '@/types/Note';
+import { Note } from '@/types/DataTypes';
 
 // component
 import Chip from './Chip';
