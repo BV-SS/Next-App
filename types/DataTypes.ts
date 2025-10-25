@@ -15,5 +15,7 @@ export interface Contact{
     designation: string,
     linkedIn: string,
     github: string,
-    avatar: string
+    avatar: string,
+    bio: string,
+    address: string
 }
