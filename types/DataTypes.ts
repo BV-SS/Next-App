@@ -1,5 +1,5 @@
 // declare the type
-type Tag = 'Home' | 'Business' | 'Personal';
+export type Tag = 'Home' | 'Business' | 'Personal';
 
 export interface Note {
     id : number,
