@@ -36,7 +36,7 @@ const NoteCard: React.FC<NoteCardProps> = ({ item }) => {
             <div className='flex items-center justify-between pt-3.5'>
                <Chip tag={item.tag} />
                  
-                <Link href={`/notes/${item.id}`} className='px-3 py-1 rounded-md bg-purple-800 text-white text-sm cursor-pointer hover:bg-purple-700'>
+                <Link href={`/notes/${item._id}`} className='px-3 py-1 rounded-md bg-purple-800 text-white text-sm cursor-pointer hover:bg-purple-700'>
                     <button >View</button>
                     <MdLaunch className='inline ml-2' />
                 </Link>

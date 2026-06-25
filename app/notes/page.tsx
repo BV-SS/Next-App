@@ -9,9 +9,16 @@ import { FaSearch } from "react-icons/fa";
 import Link from "next/link";
 
 // Data
-import notesData from "@/data/NoteData";
+// import notesData from "@/data/NoteData";
 
-const Notes = () => {
+import {Note} from "@/types/DataTypes";
+
+
+const Notes = async () => {
+  const response  = await fetch("http://localhost:3000/api/notes", {cache:'no-store'});
+  const notes = await response.json();
+  console.log(notes)
+
   return (
     <>
       <div className="px-7 flex justify-between">
@@ -38,8 +45,8 @@ const Notes = () => {
       {/* <NoteCounter noteCount={notesData.length}/> */}
 
       <div className="px-7 pt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
-        {notesData.map((item) => (
-          <NoteCard key={item.id} item={item} />
+        {notes.map((item: Note) => (
+          <NoteCard key={item._id} item={item} />
         ))}
       </div>
     </>
