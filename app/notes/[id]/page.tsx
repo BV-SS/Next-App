@@ -19,7 +19,15 @@ import { AiFillEdit } from 'react-icons/ai';
 
 const NotePage = async ({ params }: Props) => {
   const { id } = await params;
-  const note : Note | undefined = notesData.find((note) => note.id === Number(id))
+
+  const response  = await fetch(`http://localhost:3000/api/notes/${id}`, {cache:'no-store'});
+  const resNote = await response.json();
+
+  // console.log(id)
+  // console.log("------------",resNote)
+
+  // const note : Note | undefined = notesData.find((note) => note._id === Number(id))
+  // console.log("note :" , note)
   return (
     <>
       <div className='px-17 py-1'>
@@ -28,8 +36,8 @@ const NotePage = async ({ params }: Props) => {
           <div className='flex items-center justify-between'>
             <div>
 
-            <h3 className='text-3xl font-semibold pl-2 text-gray-800'>{note?.title}</h3>
-            <div className='text-md text-gray-700 py-1 pl-2'>{`Created on : ${note?.created_at}` }</div>
+            <h3 className='text-3xl font-semibold pl-2 text-gray-800'>{resNote?.title}</h3>
+            <div className='text-md text-gray-700 py-1 pl-2'>{`Created on : ${resNote?.created_at}` }</div>
             </div>
             <div className='self-start'>
               <AiFillEdit size={25} className='inline mx-2 hover:text-blue-500 cursor-pointer' />
@@ -40,12 +48,12 @@ const NotePage = async ({ params }: Props) => {
           <hr className='border-gray-300 my-2' />
 
            <div className='border border-teal-700 text-teal-700 bg-teal-200 px-2 py-1.5 rounded-md text-sm inline-block w-fit my-2 mx-2'>
-                   {note?.tag}
+                   {resNote?.tag}
                    
                 </div>
                  
           <p className=' p-2 pb-4'>
-            {note?.content}
+            {resNote?.content}
           </p>
         </CardContainer>
       </div>

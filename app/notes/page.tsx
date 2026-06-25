@@ -9,14 +9,15 @@ import { FaSearch } from "react-icons/fa";
 import Link from "next/link";
 
 // Data
-import notesData from "@/data/NoteData";
+// import notesData from "@/data/NoteData";
 
-import Note from "@/types/DataTypes";
+import {Note} from "@/types/DataTypes";
 
 
 const Notes = async () => {
   const response  = await fetch("http://localhost:3000/api/notes", {cache:'no-store'});
   const notes = await response.json();
+  console.log(notes)
 
   return (
     <>
